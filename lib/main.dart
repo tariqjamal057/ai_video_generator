@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/signin_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,26 +12,28 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'DomoAI',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        primaryColor: const Color(0xFF0a1020),
+        colorScheme: const ColorScheme.light(
+          primary: Color(0xFF0a1020),
+          secondary: Color(0xFF0f1724),
+        ),
+        scaffoldBackgroundColor: const Color(0xFF0a1020),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      darkTheme: ThemeData(
+        primaryColor: const Color(0xFF0f1724),
+        colorScheme: const ColorScheme.dark(
+          primary: Color(0xFF0f1724),
+          secondary: Color(0xFF0a1020),
+        ),
+        scaffoldBackgroundColor: const Color(0xFF0f1724),
+      ),
+      themeMode: ThemeMode.system,
+      home: const SignInPage(),
+      routes: {
+        '/home': (context) => const MyHomePage(title: 'DomoAI Home Page'),
+      },
     );
   }
 }
