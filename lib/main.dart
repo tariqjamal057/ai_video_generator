@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/signin_page.dart';
+import 'screens/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       home: const SignInPage(),
       routes: {
-        '/home': (context) => const MyHomePage(title: 'DomoAI Home Page'),
+        '/home': (context) => const HomePage(),
       },
     );
   }
