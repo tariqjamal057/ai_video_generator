@@ -1,0 +1,8 @@
+flutter_native_splash:
+  image: assets/images/domoAI_logo.png
+  color: "#0a1020"
+  android_12:
+    image: assets/images/domoAI_logo.png
+    color: "#0a1020"
+  ios: true
+  web: false

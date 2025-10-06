@@ -47,6 +47,15 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
 
+flutter_native_splash:
+  image: assets/images/domoAI_logo.png
+  color: "#0a1020"
+  android_12:
+    image: assets/images/domoAI_logo.png
+    color: "#0a1020"
+  ios: true
+  web: false
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
